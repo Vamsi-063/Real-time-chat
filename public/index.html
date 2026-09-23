@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="sidebar-header">
+        <div class="profile-avatar">V</div>
+
+        <div>
+          <h2>ChatConnect</h2>
+          <p>Real-Time Messaging</p>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search chat">
+      </div>
+
+      <div class="chat-list">
+        <div class="chat-item active">
+          <div class="chat-avatar">💬</div>
+
+          <div class="chat-details">
+            <h3>General Chat</h3>
+            <p>Real-time conversation</p>
+          </div>
+
+          <span class="active-dot"></span>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span id="sidebarOnlineCount">0 Online</span>
+      </div>
+
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+
+      <header class="chat-header">
+
+        <div class="chat-profile">
+          <div class="chat-avatar">💬</div>
+
+          <div>
+            <h2>General Chat</h2>
+            <p>
+              <span class="status-dot"></span>
+              <span id="onlineCount">0 Online</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" title="Search">🔍</button>
+          <button type="button" title="More options">⋮</button>
+        </div>
+
+      </header>
+
+      <section id="messages" class="messages-area"></section>
+
+      <div class="user-area">
+        <input
+          id="usernameInput"
+          type="text"
+          placeholder="Enter your name"
+          autocomplete="off"
+        >
+      </div>
+
+      <form id="chatForm" class="message-form">
+
+        <button type="button" class="emoji-button" title="Emoji">
+          😊
+        </button>
+
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Type a message"
+          autocomplete="off"
+        >
+
+        <button type="submit" class="send-button" title="Send">
+          ➤
+        </button>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
